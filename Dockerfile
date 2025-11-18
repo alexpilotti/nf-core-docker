@@ -20,6 +20,7 @@ RUN chmod +x nextflow && mv nextflow /bin/
 RUN mkdir /nextflow
 ENV NXF_HOME=/nextflow
 ENV NXF_VER=25.10.0
+ENV NXF_OPTS="-Xms1g -Xmx4g"
 RUN nextflow self-update
 RUN python3 -m venv /venv
 ENV VIRTUAL_ENV=/venv
