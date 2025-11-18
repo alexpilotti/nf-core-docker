@@ -3,7 +3,8 @@ FROM ubuntu:24.04
 RUN apt-get update && apt-get install -y --no-install-recommends \
    python3 python3-pip python3-venv \
    git curl ca-certificates gnupg \
-   default-jre && \
+   default-jre \
+   libatomic1 && \
    rm -rf /var/cache/apt/archives /var/lib/apt/lists/*
 RUN install -m 0755 -d /etc/apt/keyrings
 RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc && \
