@@ -26,4 +26,4 @@ RUN nextflow self-update
 RUN python3 -m venv /venv
 ENV VIRTUAL_ENV=/venv
 ENV PATH=/venv/bin:$PATH
-RUN pip install nf-core
+RUN pip install nf-core==3.5.0
